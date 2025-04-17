@@ -10,7 +10,9 @@ A full-stack WhatsApp-like chat application built with:
 
 ## 📁 Project Structure
 
-/whatsapp-clone │ ├── /client # Angular Frontend └── /server # Node.js Backend with Express, GraphQL, Sequelize
+/whatsapp-clone │ 
+  ├── /client # Angular Frontend 
+  └── /server # Node.js Backend with Express, GraphQL, Sequelize
 
 yaml
 Copy
@@ -31,15 +33,15 @@ Before running this project, make sure you have the following installed:
 
 ## ⚙️ Environment Setup
 
-### Backend `.env` file (`/server/.env`)
+### Backend `.env` file (`/backend/.env`)
 
-Create a `.env` file in the `server/` directory with the following:
+Create a `.env` file in the `backend/` directory with the following:
 
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=yourpassword
 DB_NAME=yourdbname
-PORT=4000
+PORT=5000
 
 yaml
 Copy
