@@ -1,0 +1,120 @@
+@if (receiverDetails) {
+<table class="tableData">
+  <tr>
+    <div class="profile" fxLayout="row" fxFlex="100%" fxLayoutGap="20px">
+      <div fxFlex="50%" fxLayout="row" fxLayoutGap="20px">
+        @if (receiverDetails.imgUrl) {
+        <img src="{{receiverDetails.imgUrl}}" class="userImg" fxLayoutAlign="center center">
+        }
+        @else {
+        <img src="/userIcon.jpeg" class="userImg" fxLayoutAlign="center center">
+
+        }
+        <p fxLayoutAlign="center center">{{receiverDetails.name}}</p>
+      </div>
+
+      <div fxFlex="50%" fxLayoutAlign="end center" fxLayoutGap="40px">
+        <i class="fa-solid fa-phone fa-xl" style="color: #929498;"></i>
+        <i class="fa-solid fa-video fa-xl" style="color: #929498;"></i>
+        <i class="fa-solid fa-ellipsis-vertical fa-xl" style="color: #929498;"></i>
+      </div>
+
+    </div>
+  </tr>
+  <tr>
+    <div class="messages" #scrollMe>
+      <div class="defaultMessage" fxLayout="row">
+        <i class="fa-solid fa-lock fa-lg" style="color: #b2b4b8;" fxFlex="10%" fxLayoutAlign="center center"></i>
+        <div fxFlex="90%">
+          Messagas aro end-to-end encrypted. No one outside of this chat, not even WhatsApp
+          can read or listen to them click to learn more.
+        </div>
+      </div>
+      <div *ngFor="let message of messages" fxLayout="column">
+        @if (message.showDate) {
+        <p class="date">{{message.createdAt[0] | date}}</p>
+        }
+
+        @if (message.userId == userId ) {
+        <div class="senderMessage" fxLayout="column">
+          @if (message.fileUrl && message.fileType == 'image') {
+          <img src="{{message.fileUrl}}" fxLayoutAlign="center center">
+          }
+          @else if (message.fileUrl && message.fileType == 'files') {
+          <a href="{{message.fileUrl}}" target="_blank">
+            <iframe [src]="message.fileUrl | safeUrl" frameborder="0" scrolling="no">
+            </iframe>
+          </a>
+          }
+          @else if (message.fileUrl && message.fileType == 'video') {
+          <video width="100%" height="100%" controls>
+            <source [src]="message.fileUrl" type="video/mp4">
+          </video>
+          }
+          <div fxFlex="80%" fxLayoutAlign="start center" style="padding-top: 10px;">
+            {{message.content}}
+          </div>
+          <div class="timeStamp" fxFlex="20%" fxLayoutAlign="end end">
+            {{message.createdAt | timePipe}}
+          </div>
+        </div>
+        }
+        @else {
+        <div class="receiverMessage" fxLayout="column">
+          @if (message.fileUrl && message.fileType == 'image') {
+          <img src="{{message.fileUrl}}" fxLayoutAlign="center center">
+          }
+          @else if (message.fileUrl && message.fileType == 'files') {
+          <a href="{{message.fileUrl}}" target="_blank">
+            <iframe [src]="message.fileUrl | safeUrl" frameborder="0" scrolling="no">
+            </iframe>
+          </a>
+          }
+          @else if (message.fileUrl && message.fileType == 'video') {
+          <video width="100%" height="100%" controls>
+            <source [src]="message.fileUrl" type="video/mp4">
+          </video>
+          }
+          <div fxFlex="80%" fxLayoutAlign="start center" style="padding-top: 10px;">
+            {{message.content}}
+          </div>
+          <div class="timeStamp" fxFlex="20%" fxLayoutAlign="end end">
+            {{message.createdAt | timePipe}}
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+
+  </tr>
+  <tr>
+    <div class="sendMessage" fxLayout="column">
+      @if (selectedFile!==null) {
+      <div class="uploadFile">
+        <img [src]="imagePreviewUrl" class="uploadFileImg">
+      </div>
+      }
+      <div fxFlex="100%" fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="start center">
+        <label for="file-upload" style="cursor: pointer;">
+          <i class="fa-solid fa-link fa-xl" style="color: #aaadb1; padding-left: 20px;"></i>
+        </label>
+        <input id="file-upload" type="file" (change)="onFileSelected($event)" style="display: none;" />
+
+        <input type="text" #messageInput [(ngModel)]="messageContent" placeholder="Type a message here .."
+          (keydown.enter)="sendMessage()">
+        <div (click)='sendMessage()'>
+          <img src="/send.png" alt="ssa" style="cursor: pointer;">
+        </div>
+      </div>
+    </div>
+
+
+  </tr>
+</table>
+}
+@else {
+<div class="whatsappHome" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+  <img src="/whatappHome.png" alt="">
+  <p>Welcome to whatsapp Desktop </p>
+</div>
+}

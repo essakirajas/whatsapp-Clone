@@ -1,0 +1,33 @@
+@if(!userFound){
+<div fxLayout="column">
+  <div class="top" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="30px">
+    <img src=" /whatsap.png" alt="">
+    <p>WHATSAPP WEB</p>
+  </div>
+  <div class="content" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+    <div class="enterPh">Enter Phone number</div>
+    <p>Select a country and enter your WhatsApp phone number.</p>
+    <div class="countryCode" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+      <img src="/india.png" alt="">
+      <p>India</p>
+    </div>
+    <div class="numInput">
+      <input type="tel" #phoneNo>
+    </div>
+    @if (userFound == false) {
+    <div class="Invalid">Invalid Phone Number</div>
+    }
+    <button type="submit" (click)="ValidateUser(phoneNo.value)">Next</button>
+    <div fxLayout="row" fxLayoutGap="10px" class="linkQr">
+      <p>Link with QR code</p>
+      <p>|</p>
+      <p (click)="register()" class="newUser">New User</p>
+    </div>
+  </div>
+  <div class="bottom"></div>
+</div>
+}
+@else if(userFound) {
+<app-code [phoneNumber]="phoneNo"></app-code>
+
+}
