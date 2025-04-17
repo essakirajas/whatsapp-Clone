@@ -56,10 +56,10 @@ Replace `yourpassword` and `yourdbname` with your actual MySQL credentials.
 ### 🚀 Backend Setup
 
 Navigate to the backend directory
-cd server
+cd backend
 
 Install backend dependencies
-npm install
+npm install --legacy-peer-deps
 
 Run database migrations (if applicable)
 npx sequelize-cli db:migrate
@@ -81,7 +81,7 @@ Open a new terminal and go to frontend directory
 cd client
 
 Install frontend dependencies
-npm install
+npm install --legacy-peer-deps
 
 Start the Angular development server
 ng serve
@@ -98,7 +98,7 @@ Frontend will be available at: http://localhost:4200
 
 In your Angular app, configure the GraphQL endpoint to connect to:
 
-http://localhost:4000/graphql
+http://localhost:5000/graphqlserver
 
 yaml
 Copy
@@ -111,7 +111,7 @@ If you're using Apollo Client, update your Apollo configuration accordingly.
 ## 🧪 Testing the App
 
 - Visit http://localhost:4200 to view the frontend  
-- Open http://localhost:4000/graphql to test GraphQL queries in Playground
+- Open http://localhost:4000/graphqlserver to test GraphQL queries in Playground
 
 ---
 
@@ -119,13 +119,19 @@ If you're using Apollo Client, update your Apollo configuration accordingly.
 
 To build the Angular frontend for production:
 
-cd client ng build --prod
+cd frontend ng build --prod
+
+(or)
+
+To test the Angular frontend :
+
+cd frontend ng serve 
 
 yaml
 Copy
 Edit
 
-The build files will be in the `client/dist/` directory. You can serve them using an HTTP server like `nginx` or integrate them into your Node backend.
+The build files will be in the `frontend/dist/` directory. You can serve them using an HTTP server like `nginx` or integrate them into your Node backend.
 
 ---
 
