@@ -57,16 +57,16 @@ Replace `yourpassword` and `yourdbname` with your actual MySQL credentials.
 ### 🚀 Backend Setup
 
 Navigate to the backend directory
--cd backend
+- cd backend
 
 Install backend dependencies
--npm install --legacy-peer-deps
+- npm install --legacy-peer-deps
 
 Run database migrations (if applicable)
--npx sequelize-cli db:migrate
+- npx sequelize-cli db:migrate
 
 Start the backend server
--npm start
+- npm start
 
 yaml
 Copy
@@ -79,13 +79,13 @@ Backend will be running at: http://localhost:5000/graphqlserver
 ### 🎨 Frontend Setup
 
 Open a new terminal and go to frontend directory
-cd client
+- cd client
 
 Install frontend dependencies
-npm install --legacy-peer-deps
+- npm install --legacy-peer-deps
 
 Start the Angular development server
-ng serve
+- ng serve
 
 yaml
 Copy
