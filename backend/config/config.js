@@ -18,7 +18,7 @@ CONFIG.MIN_POOL_CONN = Number(process.env.MIN_POOL_CONN) || 1;
 CONFIG.CONN_IDLE_TIME = Number(process.env.CONN_IDLE_TIME) || 10000;
 
 CONFIG.SENDER_MAIL = process.env.sender_mail || "essakirajas26@gmail.com";
-CONFIG.EMAIL_PASS_KEY = process.env.EMAIL_PASS_KEY || "ypxc dogw syqn dyji";
+CONFIG.EMAIL_PASS_KEY = process.env.EMAIL_PASS_KEY;
 
 CONFIG.ACTIVATION_KEY = process.env.activation_key || "essakiraja";
 CONFIG.ACTIVATION_EXPIRY = process.env.activation_expiry || "1h";
