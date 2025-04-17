@@ -38,16 +38,11 @@ Before running this project, make sure you have the following installed:
 ### Backend `.env` file (`/backend/.env`)
 
 Create a `.env` file in the `backend/` directory with the following:
-
-DB_HOST=localhost
-
-DB_USER=root
-
-DB_PASSWORD=yourpassword
-
-DB_NAME=yourdbname
-
-PORT=5000
+-DB_HOST=localhost
+-DB_USER=root
+-DB_PASSWORD=yourpassword
+-DB_NAME=yourdbname
+-PORT=5000
 
 yaml
 Copy
@@ -62,16 +57,16 @@ Replace `yourpassword` and `yourdbname` with your actual MySQL credentials.
 ### 🚀 Backend Setup
 
 Navigate to the backend directory
-cd backend
+-cd backend
 
 Install backend dependencies
-npm install --legacy-peer-deps
+-npm install --legacy-peer-deps
 
 Run database migrations (if applicable)
-npx sequelize-cli db:migrate
+-npx sequelize-cli db:migrate
 
 Start the backend server
-npm start
+-npm start
 
 yaml
 Copy
