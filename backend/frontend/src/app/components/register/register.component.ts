@@ -13,7 +13,6 @@ import { FlexLayoutModule } from 'ngx-flexible-layout';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
-  //Hello
   registerForm: FormGroup;
   selectedFile: File | null = null;
   formSubmitted = false;

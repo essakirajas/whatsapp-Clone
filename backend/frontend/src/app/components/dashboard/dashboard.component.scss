@@ -1,0 +1,64 @@
+.userImg {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.userprofile {
+  background-color: rgb(237, 237, 237);
+  padding: 15px 20px;
+  padding-bottom: 50px;
+}
+
+.userprofile p {
+  padding-left: 20px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.profileContent {
+  padding-top: 40px;
+}
+
+.serachBox {
+  padding: 10px 15px;
+}
+
+.searchInput {
+  background-color: rgb(237, 237, 237);
+  border-radius: 5px;
+  border-style: none;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.inputContent {
+  opacity: .5;
+}
+
+.navigation {
+  margin-top: 10px;
+  background-color: rgb(237, 237, 237);
+  padding: 0 20px;
+}
+
+.users {
+  height: 80px;
+  padding-left: 20px;
+  border: 1px;
+  border-color: rgb(220, 215, 215);
+  border-style: none none solid;
+}
+
+.usersName {
+  cursor: pointer;
+}
+
+.usersName .name {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.usersName .msg {
+  opacity: .6;
+}

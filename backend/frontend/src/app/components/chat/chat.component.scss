@@ -1,0 +1,157 @@
+.whatsappHome {
+  border-left: 1px solid rgb(197, 193, 193);
+  height: 790px;
+}
+
+.whatsappHome img {
+  height: 30%;
+  width: 40%;
+  border-radius: 10px;
+}
+
+.whatsappHome p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.tableData {
+  width: 100%
+}
+
+.profile {
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+  padding: 10px 20px;
+  border-left: 1px solid rgb(226, 220, 220);
+}
+
+.profile p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.userImg {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+
+.messages {
+  overflow-y: auto;
+  height: 610px;
+  padding: 10px;
+  background-image: url('/chatbg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.messages .defaultMessage {
+  margin: 1% 25%;
+  padding: 20px;
+  font-size: 15px;
+  color: rgb(82, 86, 89);
+  background-color: rgb(254, 236, 220);
+}
+
+.messages .date {
+  margin: 1% 45%;
+  background-color: rgb(237, 231, 222);
+  padding: 1%;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.senderMessage {
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 300;
+  margin-left: 55%;
+  width: 50%;
+  max-width: 40%;
+  background-color: rgb(219, 248, 198);
+  word-wrap: break-word;
+  white-space: normal;
+  display: inline-block;
+  overflow-wrap: break-word;
+  height: auto;
+}
+
+.senderMessage img {
+  padding-top: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.senderMessage iframe {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.timeStamp {
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+
+.receiverMessage {
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: 300;
+  margin-left: 5%;
+  height: 40px;
+  width: 50%;
+  max-width: 40%;
+  background-color: rgb(243, 231, 231);
+  word-wrap: break-word;
+  white-space: normal;
+  display: inline-block;
+  overflow-wrap: break-word;
+  height: auto;
+}
+
+.receiverMessage img {
+  padding-top: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.receiverMessage iframe {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sendMessage {
+  position: relative;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(237, 237, 237);
+}
+
+.sendMessage input {
+  padding-left: 20px;
+  font-size: medium;
+  opacity: .6;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 85%;
+}
+
+.sendMessage .uploadFile {
+  padding-left: 70px;
+}
+
+.uploadFileImg {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 120px;
+  width: 130px;
+}

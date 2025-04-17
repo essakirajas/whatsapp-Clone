@@ -1,0 +1,42 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <h2>Register</h2>
+
+  <!-- Name -->
+  <div>
+    <label>Name:</label>
+    <input type="text" formControlName="name" [ngClass]="{ 'invalid': isInvalid('name') }" />
+    <p class="error-msg" *ngIf="isInvalid('name')">Name is required.</p>
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email" [ngClass]="{ 'invalid': isInvalid('email') }" />
+    <p class="error-msg" *ngIf="isInvalid('email')">Enter a valid email.</p>
+  </div>
+
+  <!-- Phone No -->
+  <div>
+    <label>Phone No:</label>
+    <input type="tel" formControlName="phoneNo" [ngClass]="{ 'invalid': isInvalid('phoneNo') }" />
+    <p class="error-msg" *ngIf="isInvalid('phoneNo')">Phone number is required.</p>
+  </div>
+
+  <!-- Password -->
+  <div>
+    <label>Password:</label>
+    <input type="password" formControlName="password" [ngClass]="{ 'invalid': isInvalid('password') }" />
+    <p class="error-msg" *ngIf="isInvalid('password')">Password must be at least 6 characters.</p>
+  </div>
+
+  <!-- File Upload -->
+  <div>
+    <label>Upload Your Image:</label>
+    <input type="file" (change)="onFileSelected($event)" />
+    <p class="error-msg" *ngIf="!selectedFile && formSubmitted">Image is required.</p>
+    <p *ngIf="selectedFile" class="file-feedback">✅ File selected: {{ selectedFile.name }}</p>
+  </div>
+
+  <br />
+  <button type="submit">Register</button>
+</form>
