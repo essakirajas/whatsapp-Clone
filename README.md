@@ -11,7 +11,10 @@ A full-stack WhatsApp-like chat application built with:
 ## 📁 Project Structure
 
 /whatsapp-clone │ 
+
   ├── /client # Angular Frontend 
+
+  
   └── /server # Node.js Backend with Express, GraphQL, Sequelize
 
 yaml
