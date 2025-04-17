@@ -1,0 +1,41 @@
+<div fxLayout="column" class="content">
+  <div class="OtpTop">
+  </div>
+
+  <div class="OtpContent" fxLayout="column">
+    <div fxLayout="row" class="content1" fxLayoutAlign="center" fxLayoutGap="25px">
+      <img src="/whatsapp-logo.png">
+      <div fxLayout="column" fxLayoutGap="5px">
+        <div class="content1-1">Download WhatsApp for Mac</div>
+        <div class="content1-2">Get calling and a faster experience wth the new Mac app.</div>
+      </div>
+      <button>Get the app</button>
+    </div>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div class="contentLeft" fxLayout="column" fxFlex="50%" fxLayoutGap="20px">
+        <div class="enterCode">Enter code on phone</div>
+        <div class="link">Linking WhatsApp account {{phoneNumber}} (edit)</div>
+        <ol>
+          <li> Open WhatsApp on your phone</li>
+          <li>Tap Menu on Android, or Settings on iPhone</li>
+          <li>Tap Linked devices and then Link a device</li>
+          <li> Tap Link with phone number hstead and enter this
+            code on your phone</li>
+        </ol>
+        <p class="linkQrCode">Link with QR code</p>
+      </div>
+
+      <div class="contentRight" fxFlex="50%" fxLayoutAlign="center start" fxLayoutGap="10px">
+        <input *ngFor="let input of inputs; let i = index" type="text" maxlength="1" class="code-input" required
+          (input)="onInput($event, i)" (keydown)="onKeyDown($event, i)">
+      </div>
+    </div>
+  </div>
+  <div class="OtpBottom"></div>
+</div>
+
+@if (loading==true) {
+<div class="overlay">
+  <div class="loader"></div>
+</div>
+}
