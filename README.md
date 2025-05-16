@@ -9,6 +9,8 @@ A full-stack WhatsApp-like chat application built with:
 ---
 
 ## Screen Shots
+![Chat Page](https://github.com/essakirajas/whatsapp-Clone/blob/main/screenshots/chatPage%201.png?raw=true)
+![Enter Mobile Number](https://github.com/essakirajas/whatsapp-Clone/blob/main/screenshots/Mobile%20No%20Enter.png?raw=true)
 ![Enter otp](https://github.com/essakirajas/whatsapp-Clone/blob/main/screenshots/Enter%20Otp.png)
 
 
