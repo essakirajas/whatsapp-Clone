@@ -8,6 +8,9 @@ A full-stack WhatsApp-like chat application built with:
 
 ---
 
+## Screen Shots
+![Enter Otp]([https://raw.githubusercontent.com/your-username/your-repo/main/images/photo.jpg](https://github.com/essakirajas/whatsapp-Clone/blob/main/screenshots/Enter%20Otp.png))
+
 ## 📁 Project Structure
 
 /whatsapp-clone │ 
